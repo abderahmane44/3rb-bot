@@ -46,6 +46,10 @@ __~~3rb bot~~__ By: Wolf Gamer#3068
  
  ❖ $show ➾ to show channel 
 
+ ❖ $new ➾ to open tickit
+
+ ❖ $close ➾ to close tickit
+
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
@@ -81,7 +85,7 @@ Server support: https://discord.gg/D7Y4aP
 
 bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=532604442785349642&permissions=0&scope=bot
 
-==================================================================
+==================================================================**
 
 `);
 
