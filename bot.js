@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help-en") {
+     if (message.content === prefix + "help") {
 		 message.channel.send('**The Message Was Sent On Private**');
             
 	
@@ -75,11 +75,11 @@ __~~3rb bot~~__ By: Wolf Gamer#3068
 
 ==================================================================
 
-Server support: https://discord.gg/twdHNJT
+Server support:https: //discord.gg/TTjGUuh
 
 ==================================================================
 
-bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=532604442785349642&permissions=0&scope=bot
 
 ==================================================================
 
@@ -94,7 +94,7 @@ bot invite link: https://discordapp.com/oauth2/authorize?client_id=3887008638936
 
 
 client.on('message', message => {
-    var x1 = "-supportteam"
+    var x1 = "$support"
 	if (message.content === x1) {
 	    if(!message.channel.guild) return;
 		message.member.addRole(message.guild.roles.find("name", "Support+"));
@@ -406,7 +406,7 @@ const embed = new Discord.RichEmbed()
      .setColor(0xd3d0c4)
 .setAuthor(message.author.username, message.author.avatarURL)
 .setTitle(':arrow_right: Click Here Invite Link اضغط هنا')
-.setURL('https://discordapp.com/api/oauth2/authorize?client_id=500702351229714432&permissions=8&scope=bot')
+.setURL('https://discordapp.com/api/oauth2/authorize?client_id=532604442785349642&permissions=0&scope=bot')
 
 message.channel.sendEmbed(embed);
 
