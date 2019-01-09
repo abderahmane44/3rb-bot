@@ -136,34 +136,30 @@ client.on('message', msg => {
 });
 
 
-client.on('message', message => 
- 
-    if(message.content === "$lock") {
-                        if(!message.channel.guild) return message.reply(' This command only for servers');
- 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: false
- 
-           }).then(() => {
-               message.reply("تم تقفيل الشات :white_check_mark: ")
-           });
-             }
-//™¦༺♚ƙἶղց|MaS♚༺¦™#7105
-if (message.content === "$unlock") {
-    if(!message.channel.guild) return message.reply(' This command only for servers');
- 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: true
- 
-           }).then(() => {
-               message.reply("تم فتح الشات:white_check_mark:")
-           });
-             }
- 
- 
- 
+client.on('message', message => {
+         if(message.content === prefix + "lock") {
+                             if(!message.channel.guild) return message.reply('** This command only for servers**');
+  
+     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
+                message.channel.overwritePermissions(message.guild.id, {
+              SEND_MESSAGES: false
+  
+                }).then(() => {
+                    message.reply("**__تم تقفيل الشات__ :white_check_mark: **")
+                });
+                  }
+      if(message.content === prefix + "unlock") {
+                          if(!message.channel.guild) return message.reply('** This command only for servers**');
+  
+     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
+                message.channel.overwritePermissions(message.guild.id, {
+              SEND_MESSAGES: true
+  
+                }).then(() => {
+                    message.reply("**__تم فتح الشات__:white_check_mark:**")
+                });
+      }
+         
 });
 
 
