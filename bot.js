@@ -75,7 +75,7 @@ __~~3rb bot~~__ By: Wolf Gamer#3068
 
 ==================================================================
 
-Server support:https: //discord.gg/TTjGUuh
+Server support: https://discord.gg/TTjGUuh
 
 ==================================================================
 
