@@ -717,12 +717,3 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
 
 	
 client.login(process.env.BOT_TOKEN);
-	
-	
-	
-	
-	
-	
-	
-	
-	
