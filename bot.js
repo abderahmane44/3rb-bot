@@ -50,6 +50,7 @@ __~~3rb bot~~__ By: Wolf Gamer#3068
 
  ❖ $close ➾ to close tickit
 
+ ❖ $bot ➾ bot info
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
@@ -75,11 +76,12 @@ __~~3rb bot~~__ By: Wolf Gamer#3068
                     Welcome
 ╚[❖════════════❖]╝
 
-
+ملاحظة:لتفعييل الترحيب 
+لازم روم اسمها `Welcome`
 
 ==================================================================
 
-Server support: https://discord.gg/D7Y4aP
+Server support: https://discord.gg/TTjGUuh
 
 ==================================================================
 
@@ -97,20 +99,6 @@ bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=532604442
 
 
 
-client.on('message', message => {
-    var x1 = "$support"
-	if (message.content === x1) {
-	    if(!message.channel.guild) return;
-		message.member.addRole(message.guild.roles.find("name", "Support+"));
-	const embed = new Discord.RichEmbed()
- 	.setFooter('Requested by '+message.author.username, message.author.avatarURL)
- 	.addField('Requested by:', "<@" + message.author.id + ">")
-   .setDescription('**__:white_check_mark: Support Team Added + __**')
-   .setColor("3fcf24")
-   
-  message.channel.sendEmbed(embed);
-	}
-});
 
 
 
@@ -339,6 +327,43 @@ client.on('message', message => {
     }
 });
 
+client.on("message", msg => {
+    var prefix = "$";
+if(msg.content.startsWith (prefix + "id")) {
+if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+const embed = new Discord.RichEmbed();
+embed.addField("🌪  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
+   .addField("🆔  الايدي", `**[ ${msg.author.id} ]**`, true)
+   .setColor("RANDOM")
+   .setFooter(msg.author.username , msg.author.avatarURL)
+   .setThumbnail(`${msg.author.avatarURL}`)
+   .setTimestamp()
+   .setURL(`${msg.author.avatarURL}`)
+   .addField('🕵  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+   .addField('🛰   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
+   .addField('🎖  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
+   .addField('🤖  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
+msg.channel.send({embed: embed})
+}
+});
+
+client.on('message', message => {
+    if (message.content === ('$bot')) {
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .addField('**Bot Ping**🚀 :' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('**Servers**📚 :', [client.guilds.size], true)
+            .addField('**Channels**📝 :' , `[ ${client.channels.size} ]` , true)
+            .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
+            .addField('**Bot Name**🔰 :' , `[ ${client.user.tag} ]` , true)
+            .addField('**Bot Owner**👑 :' , `[<@ايدي حقك>]` , true)
+            .setFooter(message.author.username, message.author.avatarURL)
+    })
+}
+});
 
 
 client.on("guildMemberAdd", member => {
