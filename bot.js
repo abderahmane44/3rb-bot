@@ -6,94 +6,69 @@ client.on('ready', () => {
 });
 
 
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-		 message.channel.send('**The Message Was Sent On Private**');
-            
-	
-		 
+     client.on("message", message => {
+      if (message.content === "$help") {
+       const embed = new Discord.RichEmbed() 
+           .setThumbnail(message.author.avatarURL)
+           .setColor("#FF0000")
+           .setDescription(`**    :sleuth_or_spy::skin-tone-1: اوامر الأداره :sleuth_or_spy::skin-tone-1:**
+**============ **
 
+  ** $role @user <rank> | لأعطاء رتبة لعضو معين**:large_orange_diamond: 
 
- message.author.sendMessage(`
- **
-__~~3rb bot~~__ By: Wolf Gamer#3068
+  ** $roleremove @user <rank> | لازالة الرتبة من شخص معين** :orange_book: 
 
+  ** $role humans <rank> | لأعطاء رتبة للاشخاص فقط **:man: , :woman: 
 
-╔[❖════════════❖]╗
-             Prefix = ' $ '
-╚[❖════════════❖]╝
+  ** $role bots <rank> | لأعطاء رتبة لجميع البوتات**:robot: 
 
-╔[❖════════════❖]╗
-             Admin Commands
-╚[❖════════════❖]╝
+  ** $show | اضهار الشات المخفية**:blush: 
 
- ❖ $kick <mention > ➾ kick member from server
+  ** $hide | اخفاء الشات**:arrow_heading_down: 
 
- ❖ $clear ➾ clear chat ( not ready yet fixing)
+  ** $clear <numbr> | مسح الشات بعدد**:information_source: 
+
+  ** $mute @user <reason> | اعطاء العضو ميوت لازم رتبة <Muted>**:mute:
+
+  ** $unmute @user | لفك الميوت عن الشخص ** :loud_sound:
+
+  ** $kick @user <reason> | طرد الشخص من السيرفر**  :outbox_tray:
+
+  ** $ban @user <reason> | حضر الشخص من السيرفر** :no_entry:
+
+  ** $lock | تقفيل الشات**:no_entry:
+
+  ** $unlock | فتح الشات**:on:   
+
+  ** $new |فتح تيكيت ** :tickets: 
  
- ❖ $mute < mention > ➾ mute member
+  ** $close |لقفل التيكيت** :x:
 
- ❖ $unmute <mention> ➾ unmute member
-
- ❖ $lock  ➾ lock a room
-
- ❖ $unlock   ➾ unlock the room
-  
- ❖ $ban < mention > ➾ ban a member 
-
- ❖ $hide ➾ to hide channel 
+  ** $date |لمعرفة الوقت**:date: 
  
- ❖ $show ➾ to show channel 
+  ** $id |لمعرفة معلوماتك**:id:
 
- ❖ $new ➾ to open tickit
+  ** $server |معرفة كل شي عن السيرفر**:information_source: 
 
- ❖ $close ➾ to close tickit
+  ** $bot | لمعرفة معلومات البوت**:robot: 
 
- ❖ $bot ➾ bot info
-╔[❖════════════❖]╗
-            General  Commands
-╚[❖════════════❖]╝
+  ** $avatar |لعرض صورتك**:frame_photo: 
 
-❖ $roll <number> ➾ role 
+  ** $member |معرفة كم عضو و الحالات**:person_frowning: 
 
-❖ $date ➾ see date
-
-❖ $member ➾ members info
-
-❖ $id ➾ your id
-
-❖ $avatar ➾ your avatar account
-
-❖ $ping ➾ to see ping
+  ** $ping |كم سرعة الانترنت**:satellite:
  
-❖ $server ➾ server informations 
+  ** $invite |لدعوة البوت:robot: 
 
-❖ $invite ➾ bot invite link
+  ** invite link**:** https://discordapp.com/api/oauth2/authorize?client_id=532604442785349642&permissions=0&scope=bot**
 
-❖ so0n
-╔[❖════════════❖]╗
-                    Welcome
-╚[❖════════════❖]╝
-
-ملاحظة:لتفعييل الترحيب 
-لازم روم اسمها `Welcome`
-
-==================================================================
-
-Server support: https://discord.gg/TTjGUuh
-
-==================================================================
-
-bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=532604442785349642&permissions=0&scope=bot
-
-==================================================================**
-
-`);
-
-    }
-});
-
+**             __~~3rb bot~~__ By: Wolf Gamer#3068             **
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+`)
+     message.author.sendEmbed(embed)
+     
+     }
+     });
 
 
 
@@ -623,7 +598,6 @@ client.on('message', message => {
     }
     }
     });
-
 client.on("message", (message) => {
     /// DREAM
 var prefix = '$';//البرفكس
