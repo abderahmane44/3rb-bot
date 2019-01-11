@@ -64,7 +64,7 @@ __~~3rb bot~~__ By: Wolf Gamer#3068
 
 ❖ $avatar ➾ your avatar account
 
-❖ *ping ➾ to see ping
+❖ $ping ➾ to see ping
  
 ❖ $server ➾ server informations 
 
@@ -659,7 +659,15 @@ var prefix = '$';//البرفكس
 });
 
 
-
+client.on('message' , message => {
+  var prefix = "$";//البرفكس
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "ping")) {
+ message.channel.send('Pong...').then((msg) => {
+      msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);//حقوق دايموند كودز
+ })
+  }  
+ });
 
 
 
