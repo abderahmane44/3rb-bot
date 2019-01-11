@@ -61,7 +61,7 @@ client.on('ready', () => {
   ** $invite |لدعوة البوت:robot: 
 
   ** invite link**:** https://discordapp.com/api/oauth2/authorize?client_id=532604442785349642&permissions=0&scope=bot**
-
+  **Support 3rb bot link**:** https://discord.gg/YD4eaUf**
 **             __~~3rb bot~~__ By: Wolf Gamer#3068             **
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 `)
