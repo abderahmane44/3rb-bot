@@ -686,6 +686,8 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     });
 
 
+  client.user.setActivity('$help|$invite',{type: "PLAYING"})
+
 
 
 
