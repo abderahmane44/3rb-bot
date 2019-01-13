@@ -6,7 +6,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on('ready', () => {
-client.user.setActivity("$help|$invite"",{type: 'PLAYING'})
+client.user.setActivity(("$help | $invite",",{type: 'PLAYING'})
 });
 
      client.on("message", message => {
